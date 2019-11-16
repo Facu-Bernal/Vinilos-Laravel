@@ -1,5 +1,3 @@
-@extends("plantilla")
-@extends("header")
 @section("faq")
 
 <section>
@@ -42,5 +40,3 @@
     </div>
     <section>
     @endsection()
-    @extends("footer")
-    

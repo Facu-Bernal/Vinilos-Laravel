@@ -22,8 +22,6 @@
     @yield("header")
     @yield("faq")
     @yield("footer")
-    
-
 </body>
 
 </html>

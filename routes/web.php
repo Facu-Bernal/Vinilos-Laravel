@@ -12,6 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('faq');
+    return view('main');
 });
-
