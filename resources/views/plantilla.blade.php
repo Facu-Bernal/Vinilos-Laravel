@@ -19,9 +19,14 @@
 </head>
 
 <body>
-    @yield("header")
-    @yield("faq")
-    @yield("footer")
+    @yield('header')
+    @yield('home')
+    @yield('faq')
+    @yield('contacto')
+    @yield('register')
+    @yield('login')
+    @yield('user-profile')
+    @yield('footer')
 </body>
 
 </html>

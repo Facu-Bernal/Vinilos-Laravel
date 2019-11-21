@@ -11,6 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main');
+Route::get('/faq', function () {
+    return view('faq');
+});
+Route::get('/contacto', function(){
+  return view('contacto');
+});
+Route::get('/home', function(){
+  return view('home');
+});
+Route::get('/register', function(){
+  return view('register');
+});
+Route::get('/login', function(){
+  return view('login');
+});
+Route::get('/user-profile', function(){
+  return view('user-profile');
 });
