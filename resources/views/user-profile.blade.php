@@ -29,7 +29,7 @@
                 </div>
             </div>
             <!-- Profile Settings-->
-          <div class="">
+          <div >
             <div class="col-lg-8 pb-5" id="perf-datosPersonales">
                 <form class="row">
                     <div class="col-md-6">

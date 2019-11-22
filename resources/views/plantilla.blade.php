@@ -26,6 +26,7 @@
     @yield('register')
     @yield('login')
     @yield('user-profile')
+    @yield('newarticulo')
     @yield('footer')
 </body>
 

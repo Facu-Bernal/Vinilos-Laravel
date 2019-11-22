@@ -17,6 +17,9 @@ Route::get('/faq', function () {
 Route::get('/contacto', function(){
   return view('contacto');
 });
+Route::get('/', function(){
+  return view('home');
+});
 Route::get('/home', function(){
   return view('home');
 });
@@ -28,4 +31,7 @@ Route::get('/login', function(){
 });
 Route::get('/user-profile', function(){
   return view('user-profile');
+});
+Route::get('/newarticulo', function(){
+  return view('newarticulo');
 });
