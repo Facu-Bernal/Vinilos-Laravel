@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/faq', function () {
     return view('faq');
 });
@@ -29,3 +30,8 @@ Route::get('/login', function(){
 Route::get('/user-profile', function(){
   return view('user-profile');
 });
+=======
+Route::get('/', function () {
+    return view('main');
+});
+>>>>>>> 30e910fa173e2bdb4aa1c06928e356765e09162f

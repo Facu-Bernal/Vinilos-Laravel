@@ -1,8 +1,10 @@
+
 @extends('plantilla')
 @extends('header')
 @extends('footer')
 
-@section('faq')
+@section("faq")
+
 
 <section>
   <div class="FAQ container">
@@ -68,6 +70,8 @@
       </div>
     <!-- Main -->
     </div>
-  </div>
-</section>
-@endsection
+
+    </div>
+    <section>
+    @endsection()
+

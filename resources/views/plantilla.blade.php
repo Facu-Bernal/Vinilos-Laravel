@@ -21,6 +21,7 @@
 </head>
 
 <body>
+
   @yield('header')
   @yield('home')
   @yield('faq')
@@ -29,6 +30,7 @@
   @yield('login')
   @yield('user-profile')
   @yield('footer')
+
 </body>
 
 </html>
