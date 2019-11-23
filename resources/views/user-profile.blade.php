@@ -1,8 +1,10 @@
-@extends('plantilla')
+@extends('/layout/plantilla')
 @extends('header')
 @extends('footer')
 
-@section('user-profile')
+@section('title', 'User-profile')
+
+@section('contenido')
     <div class="container mt-6">
         <div class="row">
             <div class="col-lg-4 pb-5">

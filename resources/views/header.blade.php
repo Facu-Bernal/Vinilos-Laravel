@@ -1,7 +1,4 @@
-
-@section("header")
-<header>
-
+@section('header')
 <nav class="navbar navbar-expand-md navbar-dark bg-info mb-3 sombra">
     <div class="container-fluid">
       <div class="header-row">
@@ -23,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
 
               <ul class="navbar-nav">
-                <li class="nav-item active"><a href="/home" class="nav-item nav-link active" id="item">Home</a></li>
+                <li class="nav-item active"><a href="/index" class="nav-item nav-link active" id="item">Home</a></li>
                 <li class="nav-item"><a href="sumary-art.php" class="nav-item nav-link active" id="item">Vinilos</a></li>
                 <li class="nav-item"><a href="/faq" class="nav-item nav-link active" id="item">FAQ</a></li>
                 <li class="nav-item"><a href="/contacto" class="nav-item nav-link active" id="item">Contacto</a></li>
@@ -40,5 +37,4 @@
       </div>
     </div>
   </nav>
-</header>
-@endsection()
+@endsection

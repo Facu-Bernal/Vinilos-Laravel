@@ -1,9 +1,11 @@
  {{-- include_once 'carrito2.php' --}}
-@extends('plantilla')
+@extends('/layout/plantilla')
 @extends('header')
 @extends('footer')
 
-@section('home')
+@section('title', 'Home')
+
+@section('contenido')
     <div class = "container">
       <main>
         <div class="container text-center my-3">
@@ -39,4 +41,4 @@
           <a href="index-art.php"><img class="btn" src="img/Infantil.png" alt=""></a>
           <a href="index-art.php"><img class="btn" src="img/Cocina.png" alt=""></a>
         </div>
-@endsection()
+@endsection

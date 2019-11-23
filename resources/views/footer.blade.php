@@ -1,6 +1,5 @@
-
-@section("footer")
-<footer class="page-footer font-small indigo">
+@section('footer')
+<div class="page-footer font-small indigo">
 <!-- Footer Links -->
   <div class="container">
     <!-- Grid row-->
@@ -93,5 +92,5 @@
   <div class="footer-copyright text-center py-3 footer2">© 2019 Copyright:
     <a href="#"> Grupo 2 | DH</a>
   </div>
-  </footer>
-  @stop
+</div>
+@endsection

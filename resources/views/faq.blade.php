@@ -1,9 +1,10 @@
-@extends('plantilla')
+@extends('/layout/plantilla')
 @extends('header')
 @extends('footer')
 
-@section('faq')
+@section('title', 'FAQ')
 
+@section('contenido')
 <section>
   <div class="FAQ container">
 

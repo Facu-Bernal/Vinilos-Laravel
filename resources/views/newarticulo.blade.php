@@ -1,7 +1,9 @@
-@extends('plantilla')
+@extends('/layout/plantilla')
 @extends('header')
 
-@section('newarticulo')
+@section('title', 'New Article')
+
+@section('contenido')
       <div class="row new-art-row">
         <div class="new-art-center-column col-sm-12 col-md-5">
           <h1>Crea tus articulos</h1>

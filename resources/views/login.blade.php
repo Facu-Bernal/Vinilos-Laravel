@@ -1,9 +1,11 @@
  {{-- require_once "php/usuarios/validar-login.php"  --}}
-@extends('plantilla')
+@extends('/layout/plantilla')
 @extends('header')
 @extends('footer')
 
-@section('login')
+@section('title', 'Login')
+
+@section('contenido')
     <div class="container register-form">
       <main>
         <form action="login.php" method="post"  autocomplete="off">

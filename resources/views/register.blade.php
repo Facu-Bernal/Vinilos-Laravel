@@ -1,9 +1,11 @@
  {{-- require_once "php/usuarios/validar-register.php" ?> --}}
-@extends('plantilla')
+@extends('/layout/plantilla')
 @extends('header')
 @extends('footer')
 
-@section('register')
+@section('title', 'Register')
+
+@section('contenido')
     <div class="container register-form">
       <main>
         <form action="register.php" method="post"  autocomplete="off">
@@ -55,4 +57,4 @@
         </form>
       </main>
     </div>
-@endsection()
+@endsection

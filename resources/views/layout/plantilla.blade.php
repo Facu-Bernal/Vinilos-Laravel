@@ -15,19 +15,21 @@
   <script src="https://kit.fontawesome.com/70f04b7ae0.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <title>@yield('title', 'Sitios')</title>
 </head>
 
 <body>
-    @yield('header')
-    @yield('home')
-    @yield('faq')
-    @yield('contacto')
-    @yield('register')
-    @yield('login')
-    @yield('user-profile')
-    @yield('newarticulo')
-    @yield('footer')
+    <header>
+      @yield('header')
+    </header>
+
+    <main>
+      @yield('contenido')
+    </main>
+
+    <footer>
+      @yield('footer')
+    </footer>
 </body>
 
 </html>
