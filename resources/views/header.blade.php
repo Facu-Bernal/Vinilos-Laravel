@@ -1,44 +1,84 @@
 
 @section("header")
-<header>
-  
-<nav class="navbar navbar-expand-md navbar-dark bg-info mb-3 sombra">
-    <div class="container-fluid">
-      <div class="header-row">
-        <div class="logo-search">
-          <div class="logo-cont col-sm-9 col-md-3">
-            <a href="#" class=""><img src="img/1.jpg" alt="" class="logo"></a>
-          </div>
-
-          
+<div class="container-fluid">
+  <header>
+    <nav id="nav1">
+      <section>
+        <div>
+          <ul id="ul1">
+            <li id="li1">ENVIOS A TODO EL PAIS <i class="fas fa-truck"></i> <a href=""></a></li>
+            <li id="li1">METODOS DE PAGO <i class="fas fa-dollar-sign"></i> <a href=""></a></li>
+            <li id="li1">CONTACTENOS <i class="fas fa-at"></i> <a href="contacto.php"></a></li>
+          </ul>
         </div>
+        <div>
+          <ul id="ul2">
+            <li id="li2"><a href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+            <li id="li2"><a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></li>
+            <li id="li2"><a href="https://pinterest.com/"><i class="fab fa-pinterest"></i></a></li>
+            <li id="li2"><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+        <div>
+          <ul id="ul3">
+            <li id="li3"><a id="login" href="login.php">LOGIN</a><i class="far fa-user"></i></a></li>
+            <li id="li3"><a id="registro" href="register.php">REGISTRARSE</a><i class="fas fa-lock"></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </nav>
+    <section>
+      <div class="grad" id="background">
+        <a href="home" class=""><img src="img/1.jpg" alt="" class="logo"></a>
+      </div>
+    </section>
+    <section>
+      <div class="shift">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white" id="nav2">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="navbar-option">
-          <div class="navbar-desp col-sm-12">
-
-            <button type="button" class="navbar-toggler col-sm-12" data-toggle="collapse" data-target="#navbarCollapse">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-
-              <ul class="navbar-nav">
-                <li class="nav-item active"><a href="index.php" class="nav-item nav-link active" id="item">Home</a></li>
-                <li class="nav-item"><a href="sumary-art.php" class="nav-item nav-link active" id="item">Vinilos</a></li>
-                <li class="nav-item"><a href="faq.php" class="nav-item nav-link active" id="item">FAQ</a></li>
-                <li class="nav-item"><a href="contacto.php" class="nav-item nav-link active" id="item">Contacto</a></li>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="sumary-art.php">VINILOS COCINAS <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sumary-art.php">VINILOS LIVIGS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sumary-art.php">VINILOS BAÑOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sumary-art.php">VINILOS DORMITORIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sumary-art.php">VINILOS INFANTILES</a>
+              </li>
+            </ul>
+            <div>
+              <ul>
+                <li id="li5">
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </li>
               </ul>
-
-              <ul class="navbar-nav nav-reg">
-                <li class="nav-item"><a class="nav-item nav-link" href="register.php">Register</a></li>
-                <li class="nav-item"><a class="nav-item nav-link" href="login.php">Login</a></li>
-                <li class="nav-item"><a class="nav-item nav-link" a href="carrito.php" id="Carrito">Carrito (<?php echo (empty($_SESSION["CARRITO"]))?0:count($_SESSION["CARRITO"]);?>)</a></li>
+            </div>
+            <div>
+              <ul>
+                <li id="li6">
+                  <a id="carrito" href="carrito.php" <?php echo (empty($_SESSION["CARRITO"]))?0:count($_SESSION["CARRITO"]);?>>Mi CARRITO<i class="fas fa-shopping-cart"></i></a>
+                </li>
               </ul>
             </div>
           </div>
-        </div>
+        </nav>
       </div>
-    </div>
-  </nav>
-</header>
+    </section>
+  </header>
+</div>
 @endsection()
