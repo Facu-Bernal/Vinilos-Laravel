@@ -1,4 +1,4 @@
-@section("footer")
+@section('footer')
 <div class="container-fluid">
   <footer>
     <!-- Footer Links -->
@@ -96,4 +96,4 @@
 
   </footer>
 </div>
-@stop()
+@endsection

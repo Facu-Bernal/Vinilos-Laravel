@@ -1,5 +1,5 @@
 
-@section("header")
+@section('header')
 <div class="container-fluid">
   <header>
     <nav id="nav1">
@@ -81,4 +81,4 @@
     </section>
   </header>
 </div>
-@endsection()
+@endsection
