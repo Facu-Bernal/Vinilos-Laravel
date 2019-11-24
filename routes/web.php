@@ -10,16 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/index', 'HomeController@ingreso');
 
-<<<<<<< HEAD
 Route::get('/faq', function () {
     return view('faq');
 });
 Route::get('/contacto', function(){
   return view('contacto');
-});
-Route::get('/home', function(){
-  return view('home');
 });
 Route::get('/register', function(){
   return view('register');
@@ -30,8 +27,6 @@ Route::get('/login', function(){
 Route::get('/user-profile', function(){
   return view('user-profile');
 });
-=======
-Route::get('/', function () {
-    return view('main');
+Route::get('/newarticulo', function(){
+  return view('newarticulo');
 });
->>>>>>> 30e910fa173e2bdb4aa1c06928e356765e09162f
