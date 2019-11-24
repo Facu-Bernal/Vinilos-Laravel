@@ -1,9 +1,11 @@
-{{-- require_once "php/usuarios/validar-contacto.php" --}}
-@extends('plantilla')
+
+@extends('/layout/plantilla')
 @extends('header')
 @extends('footer')
 
-@section('contacto')
+@section('title', 'Contacto')
+
+@section('contenido')
     <div class="contacto container">
       <div class="titulo-contenedor">
         <h3 class="titulo-faq">Contactate con Nosotros</h3>
@@ -50,4 +52,4 @@
       </div>
     </div>
   </div>
-@endsection()
+@endsection
