@@ -1,8 +1,10 @@
-@extends('plantilla')
+@extends('/layout/plantilla')
 @extends('header')
 @extends('footer')
 
-@section('user-profile')
+@section('title', 'User-profile')
+
+@section('contenido')
     <div class="container mt-6">
         <div class="row">
             <div class="col-lg-4 pb-5">
@@ -29,7 +31,7 @@
                 </div>
             </div>
             <!-- Profile Settings-->
-          <div class="">
+          <div >
             <div class="col-lg-8 pb-5" id="perf-datosPersonales">
                 <form class="row">
                     <div class="col-md-6">
