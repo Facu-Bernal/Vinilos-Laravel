@@ -21,8 +21,8 @@
         </div>
         <div>
           <ul id="ul3">
-            <li id="li3"><a id="login" href="login.php">LOGIN</a><i class="far fa-user"></i></a></li>
-            <li id="li3"><a id="registro" href="register.php">REGISTRARSE</a><i class="fas fa-lock"></i></a>
+            <li id="li3"><a id="login" href="/login">LOGIN</a><i class="far fa-user"></i></a></li>
+            <li id="li3"><a id="registro" href="/register">REGISTRARSE</a><i class="fas fa-lock"></i></a>
             </li>
           </ul>
         </div>
@@ -30,7 +30,7 @@
     </nav>
     <section>
       <div class="grad" id="background">
-        <a href="home" class=""><img src="img/1.jpg" alt="" class="logo"></a>
+        <a href="/index" class=""><img src="img/1.jpg" alt="" class="logo"></a>
       </div>
     </section>
     <section>
