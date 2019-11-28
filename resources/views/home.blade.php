@@ -1,13 +1,15 @@
   {{-- include_once 'carrito2.php' --}}
-@extends('/layout/plantilla')
-@extends('header')
-@extends('footer')
+  @extends('/layout/plantilla')
+  @extends('header')
+  @extends('footer')
 
-@section('title', 'Home')
+  @section('title', 'Home')
 
-@section('contenido')
-    <div class = "container">
-      <main>
+  @section('contenido')
+  <div class="container">
+    <main class="main_home">
+      <section>
+        <h1>LOS MAS POPULARES</h1>
         <div class="container text-center my-3">
           <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
             <div class="carousel-inner w-100" role="listbox">
@@ -34,11 +36,21 @@
             </a>
           </div>
         </div>
+      </section>
+      <hr class="rgba-white-light width=100%">
+      <section>
+
+      </section>
+      <hr class="rgba-white-light width=100%">
+      <section>
         <div class="row inspirate">
           <h2>Inspirate!</h2>
-          <a href="index-art.php"><img class="btn" src="img/Living.png" alt=""></a>
-          <a href="index-art.php"><img class="btn" src="img/Dormitorio.png" alt=""></a>
-          <a href="index-art.php"><img class="btn" src="img/Infantil.png" alt=""></a>
-          <a href="index-art.php"><img class="btn" src="img/Cocina.png" alt=""></a>
+          <a href="index-art.php"><img id="btn" src="img/Living.png" alt=""></a>
+          <a href="index-art.php"><img id="btn" src="img/Dormitorio.png" alt=""></a>
+          <a href="index-art.php"><img id="btn" src="img/Infantil.png" alt=""></a>
+          <a href="index-art.php"><img id="btn" src="img/Cocina.png" alt=""></a>
         </div>
-@endsection
+      </section>
+    </main>
+  </div>
+  @endsection

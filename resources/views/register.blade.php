@@ -1,46 +1,85 @@
  {{-- require_once "php/usuarios/validar-register.php" ?> --}}
-@extends('/layout/plantilla')
-@extends('header')
-@extends('footer')
+ @extends('/layout/plantilla')
 
-@section('title', 'Register')
+ @section('title', 'Register')
 
-@section('contenido')
-    <div class="container register-form">
-      <main>
-        <form action="register.php" method="post"  autocomplete="off">
-          {{csrf_field()}}
-          <!-- Nombre completo -->
-          <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Introduzca su nombre">
-          </div>
-          <div class="form-group">
-            <label for="lastname">Apellido</label>
-            <input type="text" name="lastname" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Introduzca su apellido">
-          </div>
-          <!-- Nombre completo -->
-          <!-- Email -->
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su email">
-            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su correo electrónico con nadie más.</small>
-          </div>
-          <!-- Email -->
-          <!-- Contraseña -->
-          <div class="form-group">
-            <label for="password1">Password</label>
-            <input type="password" name="pass" class="form-control" id="password1" placeholder="Introduzca contraseña">
-          </div>
-          <!-- Contraseña -->
-          <!-- Verificar Contraseña -->
-          <div class="form-group">
-            <label for="password2">Confirmar Password</label>
-            <input type="password" name="passv" class="form-control" id="password2" placeholder="Confirme contraseña">
-          </div>
-          <!-- Verificar Contraseña -->
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </main>
-    </div>
-@endsection
+ @section('contenido')
+ <main id="background_registro">
+   <div class="container h-100">
+     <div class="d-flex justify-content-center h-100">
+       <div class="user_card2">
+         <div class="d-flex justify-content-center">
+           <div class="brand_logo_container2">
+             <a href="/index" class=""><img src="img/1.jpg" alt="" id="registro_logo"></a>
+           </div>
+         </div>
+         <div class="d-flex justify-content-center form_container">
+           <form>
+             <div class="form-row mb-4">
+               <div class="col">
+
+                 <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nombre">
+               </div>
+               <div class="col">
+
+                 <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Apellido">
+               </div>
+             </div>
+
+
+             <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+
+             <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+             <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+               Al menos 8 caracteres y 1 dígito
+             </small>
+
+
+             <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Confirmar Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+             <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+
+             </small>
+
+
+             <div class="custom-control custom-checkbox">
+               <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+               <label class="custom-control-label" for="defaultRegisterFormNewsletter">Suscribite a nuestro newsletter</label>
+             </div>
+
+
+             <button type="button" name="button" class="btn registro_btn">Registrarse</button>
+
+             <section>
+               <p id="registro">o registráte con:</p>
+
+               <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+               <a href="#" class="mx-2" role="button"><i class="fab fa-instagram light-blue-text"></i></a>
+               <a href="#" class="mx-2" role="button"><i class="fab fa-pinterest light-blue-text"></i></a>
+               <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+             </section>
+             <hr class="width=25%">
+
+             <p>Al hacer clic
+               <em>Registrarse</em> acepta nuestros
+               <a href="" target="_blank">términos de servicio</a></p>
+
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+   <ul class="bubble-boxes">
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+   </ul>
+ </main>
+ @endsection

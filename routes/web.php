@@ -17,8 +17,14 @@ Route::post('/login', 'UserController@login');
 Route::get('/register', 'UserController@toViewRegister');
 Route::post('/register', 'UserController@register');
 
+Route::get('/home', function(){
+  return view('home');
+});
 Route::get('/faq', function () {
     return view('faq');
+});
+Route::get('/envios', function(){
+  return view('envios');
 });
 Route::get('/contacto', function(){
   return view('contacto');

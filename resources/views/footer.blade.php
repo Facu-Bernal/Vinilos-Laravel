@@ -1,5 +1,5 @@
 @section('footer')
-<div class="container-fluid">
+<div id="footer" class="container-fluid">
   <footer>
     <!-- Footer Links -->
     <div id="backgroundfooter">
