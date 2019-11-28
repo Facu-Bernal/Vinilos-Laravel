@@ -8,13 +8,16 @@
 	<div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
+
 				<div  class="d-flex justify-content-center">
 					<div class="brand_logo_container">
 						<a href="/index" class=""><img src="img/1.jpg" alt="" id="login_logo"></a>
 					</div>
 				</div>
+
 				<div id="formulario" class="d-flex justify-content-center form_container">
 					<form>
+
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -51,17 +54,6 @@
 
 		</div>
 	</div>
-	<ul class="bubble-boxes">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
+
 </main>
 @endsection
