@@ -1,14 +1,14 @@
 
-@section("header")
+@section('header')
 <div class="container-fluid">
   <header>
     <nav id="nav1">
       <section>
         <div>
           <ul id="ul1">
-            <li id="li1">ENVIOS A TODO EL PAIS <i class="fas fa-truck"></i> <a href=""></a></li>
-            <li id="li1">METODOS DE PAGO <i class="fas fa-dollar-sign"></i> <a href=""></a></li>
-            <li id="li1">CONTACTENOS <i class="fas fa-at"></i> <a href="contacto.php"></a></li>
+            <li id="li1"><a  href="/envios">ENVIOS A TODO EL PAIS</a><i class="fas fa-truck"></i></a></li>
+            <li id="li1"><a href="/metodos">METODOS DE PAGO <i class="fas fa-dollar-sign"></i></a></li>
+            <li id="li1"><a href="/contacto">CONTACTENOS <i class="fas fa-at"></i></a></li>
           </ul>
         </div>
         <div>
@@ -21,8 +21,8 @@
         </div>
         <div>
           <ul id="ul3">
-            <li id="li3"><a id="login" href="login.php">LOGIN</a><i class="far fa-user"></i></a></li>
-            <li id="li3"><a id="registro" href="register.php">REGISTRARSE</a><i class="fas fa-lock"></i></a>
+            <li id="li3"><a id="login" href="/login">LOGIN</a><i class="far fa-user"></i></a></li>
+            <li id="li3"><a id="registro" href="/register">REGISTRARSE</a><i class="fas fa-lock"></i></a>
             </li>
           </ul>
         </div>
@@ -30,7 +30,7 @@
     </nav>
     <section>
       <div class="grad" id="background">
-        <a href="home" class=""><img src="img/1.jpg" alt="" class="logo"></a>
+        <a href="/index" class=""><img src="img/1.jpg" alt="" class="logo"></a>
       </div>
     </section>
     <section>
@@ -43,7 +43,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="sumary-art.php">VINILOS COCINAS <span class="sr-only">(current)</span></a>
+                <a  class="nav-link" href="sumary-art.php">VINILOS COCINAS <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="sumary-art.php">VINILOS LIVIGS</a>
@@ -81,4 +81,4 @@
     </section>
   </header>
 </div>
-@endsection()
+@endsection

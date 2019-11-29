@@ -1,5 +1,5 @@
-@section("footer")
-<div class="container-fluid">
+@section('footer')
+<div id="footer" class="container-fluid">
   <footer>
     <!-- Footer Links -->
     <div id="backgroundfooter">
@@ -25,7 +25,7 @@
 
         <div class="col-md-2 mb-3">
           <h6 class="text-uppercase font-weight-bold">
-            <a class="links" href="faq.php">FAQ</a>
+            <a class="links" href="/faq">FAQ</a>
           </h6>
         </div>
         <!-- Grid column -->
@@ -33,7 +33,7 @@
         <!-- Grid column -->
         <div class="col-md-2 mb-3">
           <h6 class="text-uppercase font-weight-bold">
-            <a class="links" href="contacto.php">Contacto</a>
+            <a class="links" href="/contacto">Contacto</a>
           </h6>
         </div>
         <!-- Grid column -->
@@ -96,4 +96,4 @@
 
   </footer>
 </div>
-@stop()
+@endsection
