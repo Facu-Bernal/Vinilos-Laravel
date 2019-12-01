@@ -21,10 +21,34 @@
         </div>
         <div>
           <ul id="ul3">
-            <li id="li3"><a id="login" href="/login">LOGIN</a><i class="far fa-user"></i></a></li>
-            <li id="li3"><a id="registro" href="/register">REGISTRARSE</a><i class="fas fa-lock"></i></a>
-            </li>
-          </ul>
+            @guest
+              <li id="li3">
+                <a id="login" href="{{ route('login')}}">{{ __('LOGIN') }}</a><i class="far fa-user"></i></a>
+              </li>
+              @if (Route::has('register'))
+                <li id="li3">
+                  <a id="registro" href="{{ route('register') }}">{{ __('REGISTRARSE') }}</a><i class="fas fa-lock"></i>
+                </li>
+              @endif
+          @else
+            <li class="nav-item dropdown">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }} <span class="caret"></span>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                          {{ __('Logout') }}
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
+                  </div>
+              </li>
+          @endguest
         </div>
       </section>
     </nav>
@@ -43,7 +67,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a  class="nav-link" href="sumary-art.php">VINILOS COCINAS <span class="sr-only">(current)</span></a>
+                <a  class="nav-link" href="sumary-art.php">VINILOS COCINAS<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="sumary-art.php">VINILOS LIVIGS</a>

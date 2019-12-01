@@ -12,10 +12,7 @@
 */
 // Route::get('/index', 'HomeController@toViewHome');
 //
-// Route::get('/login', 'UserController@toViewLogin');
-// Route::post('/login', 'UserController@login');
-// Route::get('/register', 'UserController@toViewRegister');
-// Route::post('/register', 'UserController@register');
+
 //
 // Route::get('/home', function(){
 //   return view('home');

@@ -1,23 +1,55 @@
-@extends('layouts.app')
+  @extends('layouts.plantilla')
+  @extends('header')
+  @extends('footer')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+  @section('title', 'Home')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+  @section('contenido')
+  <div class="container">
+    <main class="main_home">
+      <section>
+        <h1>LOS MAS POPULARES</h1>
+        <div class="container text-center my-3">
+          <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox">
+              <div class="carousel-item row no-gutters active">
+                <div class="col-3 float-left"><a href="index-art.php"><img class="img-fluid" src="img/Carrousel/14a.png"></a></div>
+                <div class="col-3 float-left"><a href="index-art.php"><img class="img-fluid" src="img/Carrousel/19.png"></a></div>
+                <div class="col-3 float-left"><a href="index-art.php"><img class="img-fluid" src="img/Carrousel/20.png"></a></div>
+                <div class="col-3 float-left"><a href="index-art.php"><img class="img-fluid" src="img/Carrousel/8a.png"></a></div>
+              </div>
+              <div class="carousel-item row no-gutters">
+                <div class="col-3 float-left"><a href="index-art.php"><img class="img-fluid" src="img/Carrousel/13a.png"></a></div>
+                <div class="col-3 float-left"><a href="index-art.php"><img class="img-fluid" src="img/Carrousel/17a.png"></a></div>
+                <div class="col-3 float-left"><a href="index-art.php"><img class="img-fluid" src="img/Carrousel/16a.png"></a></div>
+                <div class="col-3 float-left"><a href="index-art.php"><img class="img-fluid" src="img/Carrousel/5a.png"></a></div>
+              </div>
             </div>
+            <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
-    </div>
-</div>
-@endsection
+      </section>
+      <hr class="rgba-white-light width=100%">
+      <section>
+
+      </section>
+      <hr class="rgba-white-light width=100%">
+      <section>
+        <div class="row inspirate">
+          <h2>Inspirate!</h2>
+          <a href="index-art.php"><img id="btn" src="img/Living.png" alt=""></a>
+          <a href="index-art.php"><img id="btn" src="img/Dormitorio.png" alt=""></a>
+          <a href="index-art.php"><img id="btn" src="img/Infantil.png" alt=""></a>
+          <a href="index-art.php"><img id="btn" src="img/Cocina.png" alt=""></a>
+        </div>
+      </section>
+    </main>
+  </div>
+  @endsection
