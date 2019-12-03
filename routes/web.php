@@ -10,18 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/faq', function () {
-    return view('faq');
-});
+ Route::get('/faq', function () {
+     return view('faq');
+ });
 Route::get('/envios', function(){
-  return view('envios');
-});
-Route::get('/pagos', function(){
- return view('pagos');
-});
+   return view('envios');
+ });
+ Route::get('/pagos', function(){
+  return view('pagos');
+ });
 Route::get('/contacto', function(){
-  return view('contacto');
-});
+   return view('contacto');
+ });
+
 
 Auth::routes();
 

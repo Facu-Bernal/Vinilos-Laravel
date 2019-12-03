@@ -93,7 +93,6 @@ a{
 }
 li{
   width: 100%;
-
 }
 #nav1{
   overflow: hidden;
@@ -121,7 +120,6 @@ i.fas.fa{
   float: left;
   margin-bottom: 10px;
   padding-left: 2px;
-
 }
 #li3{
   display: inline;
@@ -138,7 +136,7 @@ i.fas.fa{
 #li6{
   text-align: right;
   padding-right: 14px;
-}
+}  
 /* Header */
 
 /* Main */
@@ -162,7 +160,6 @@ h1, h2{
 }
 .titulo-faq {
   margin-top: 5%;
-
 }
 /* FAQ */
 
@@ -229,7 +226,6 @@ a.links{
 #login{
   margin-top: 5%;
   margin-bottom: 5%;
-
 }
 #background_login{
   background: linear-gradient(#16A2B8,#92D3DE,#FFFFFF);
@@ -355,7 +351,7 @@ a.links{
   background: #16A2B8 !important;
   color: white !important;
   position: relative;
-  z-index: 3;
+  z-index: 3;   
   width: 75%;
   padding-left: 5%;
   padding-right: 5%;
@@ -380,7 +376,7 @@ a.links{
 .input_pass
 .input_confirmpass:focus {
   box-shadow: none !important;
-  outline: 0px !important;
+  outline: 0px !important;  
 }
 #registro{
   font-size: 13px;
@@ -500,7 +496,6 @@ a.links{
 }
 
 @media (min-width: 1280px){
-
   #ul1{
     float: left;
   }
@@ -514,7 +509,6 @@ a.links{
     margin-bottom: 10px;
     padding-left: 2px;
   }
-
   ul.navbar-nav{
     position: relative;
     right: 16px;

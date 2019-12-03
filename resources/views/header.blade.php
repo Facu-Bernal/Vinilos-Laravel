@@ -1,4 +1,3 @@
-
 @section('header')
 <div class="container-fluid">
   <header>
@@ -6,8 +5,8 @@
       <section>
         <div>
           <ul id="ul1">
-            <li id="li1"><a  href="/envios">ENVIOS A TODO EL PAIS</a><i class="fas fa-truck"></i></a></li>
-            <li id="li1"><a href="/metodos">METODOS DE PAGO <i class="fas fa-dollar-sign"></i></a></li>
+            <li id="li1"><a href="/envios">ENVIOS A TODO EL PAIS</a><i class="fas fa-truck"></i></a></li>
+            <li id="li1"><a href="/pagos">METODOS DE PAGO <i class="fas fa-dollar-sign"></i></a></li>
             <li id="li1"><a href="/contacto">CONTACTENOS <i class="fas fa-at"></i></a></li>
           </ul>
         </div>
@@ -54,7 +53,7 @@
     </nav>
     <section>
       <div class="grad" id="background">
-        <a href="/index" class=""><img src="img/1.jpg" alt="" class="logo"></a>
+        <a href="/home" class=""><img src="img/1.jpg" alt="" class="logo"></a>
       </div>
     </section>
     <section>
@@ -67,7 +66,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a  class="nav-link" href="sumary-art.php">VINILOS COCINAS<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="sumary-art.php">VINILOS COCINAS <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="sumary-art.php">VINILOS LIVIGS</a>
@@ -95,7 +94,7 @@
             <div>
               <ul>
                 <li id="li6">
-                  <a id="carrito" href="carrito.php" <?php echo (empty($_SESSION["CARRITO"]))?0:count($_SESSION["CARRITO"]);?>>Mi CARRITO<i class="fas fa-shopping-cart"></i></a>
+                  <a id="carrito" href="carrito.php" <?php echo (empty($_SESSION["CARRITO"])) ? 0 : count($_SESSION["CARRITO"]); ?>>Mi CARRITO<i class="fas fa-shopping-cart"></i></a>
                 </li>
               </ul>
             </div>
