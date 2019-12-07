@@ -23,7 +23,11 @@ Route::get('/contacto', function(){
    return view('contacto');
  });
 
+Route::get('/vinilos', function (){
+    return view('vinilos');
+});
+Route::get('/cocina', 'VinilosController@cocina');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'VinilosController@lista');
