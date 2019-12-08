@@ -2,11 +2,11 @@
 @extends('header')
 @extends('footer')
 
-@section('title', 'Cocina')
+@section('title', 'Living')
 @section('contenido')
 <div class="container" style="margin: 0 auto" ;>
     <div class="row inspirate-seccion">
-        <img src="img/Cocina.png" alt="">
+        <img id="btn" src="img/Living.png" alt="">
     </div>
     <section class="tarjetas">
         <div class="card-deck row">

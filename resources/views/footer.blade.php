@@ -18,7 +18,7 @@
         <!-- Grid column -->
         <div class="col-md-2 mb-3">
           <h6 class="text-uppercase font-weight-bold">
-            <a class="links" href="index-art.php">Productos</a>
+            <a class="links" href="todos">Productos</a>
           </h6>
         </div>
         <!-- Grid column -->

@@ -70,9 +70,9 @@
     <section class="accesos">
       <div class="row inspirate">
         <h2>Inspirate!</h2>
-        <a href="index-art.php"><img id="btn" src="img/Living.png" alt=""></a>
-        <a href="index-art.php"><img id="btn" src="img/Dormitorio.png" alt=""></a>
-        <a href="index-art.php"><img id="btn" src="img/Infantil.png" alt=""></a>
+        <a href="/living"><img id="btn" src="img/Living.png" alt=""></a>
+        <a href="/dormitorio"><img id="btn" src="img/Dormitorio.png" alt=""></a>
+        <a href="/infantil"><img id="btn" src="img/Infantil.png" alt=""></a>
         <a href="/cocina"><img id="btn" src="img/Cocina.png" alt=""></a>
       </div>
     </section>
