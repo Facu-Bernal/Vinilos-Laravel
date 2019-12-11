@@ -23,7 +23,18 @@ Route::get('/contacto', function(){
    return view('contacto');
  });
 
+Route::get('/vinilos', function (){
+    return view('vinilos');
+});
+Route::get('/cocina', 'VinilosController@cocina');
+
+Route::get('/living', 'VinilosController@living');
+
+Route::get('/dormitorio', 'VinilosController@dormitorio');
+
+Route::get('/infantil', 'VinilosController@infantil');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'VinilosController@lista');

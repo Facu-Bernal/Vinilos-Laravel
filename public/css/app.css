@@ -149,6 +149,45 @@ h1, h2{
   width: 100%;
   text-align: center;
 }
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  height: 400px;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  line-height: 1;
+}
+
+.tarjetas{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+div.card{
+  position: relative;
+}
+img.nuevo{
+  position: absolute;
+  top: -19px;
+  left: -47px;
+
+}
+/* Banner */
+.inspirate{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.inspirate-seccion{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  position: relative;
+  right: 25px;
+  width: 107%;
+}
 /* Main */
 /* FAQ */
 .nav-pills .nav-link.active{
@@ -530,13 +569,7 @@ a.links{
   padding-left: 15px;
 }
 
-/* Banner */
-.inspirate{
-  margin-left: 0%;
-  margin-right: 0%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
+
 a.nav-item{
   padding: 0 auto;
   width: 5%;
