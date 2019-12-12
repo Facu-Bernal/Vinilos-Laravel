@@ -9,7 +9,7 @@
 
         <h3 class="titulo-faq">Metodos de pago</h3>
 
-        <div class="row">
+        <div class="row faqConteiner">
             <!-- Bara de navegacion -->
             <div class="col-4" style="margin-top:1%;">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -37,7 +37,7 @@
                         Conocelas haciendo click aquí.
                     </div>
                     <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
-                    Si pagás con tarjeta de crédito, los pagos se acreditan al instante. En caso de abonar con alguno de los otros medios, los pagos demoran entre 24 y 48 hs. hábiles en acreditarse. 
+                    Si pagás con tarjeta de crédito, los pagos se acreditan al instante. En caso de abonar con alguno de los otros medios, los pagos demoran entre 24 y 48 hs. hábiles en acreditarse.
                     Tené en cuenta que tu pedido será enviado una vez confirmada la acreditación.
                     </div>
                 </div>

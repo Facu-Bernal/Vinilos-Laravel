@@ -10,7 +10,7 @@
 
     <h3 class="titulo-faq">Preguntas Frecuentes</h3>
 
-    <div class="row">
+    <div class="row faqConteiner">
       <!-- Bara de navegacion -->
       <div class="col-4" style="margin-top:1%;">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">

@@ -10,6 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Auth::routes();
+
+Route::get('/home', 'VinilosController@lista');
+
+Route::get('/', 'VinilosController@lista');
+
  Route::get('/faq', function () {
      return view('faq');
  });
@@ -33,8 +40,3 @@ Route::get('/living', 'VinilosController@living');
 Route::get('/dormitorio', 'VinilosController@dormitorio');
 
 Route::get('/infantil', 'VinilosController@infantil');
-
-
-Auth::routes();
-
-Route::get('/home', 'VinilosController@lista');

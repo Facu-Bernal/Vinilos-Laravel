@@ -136,12 +136,12 @@ i.fas.fa{
 #li6{
   text-align: right;
   padding-right: 14px;
-}  
+}
 /* Header */
 
 /* Main */
 .main_home{
-  padding-top: 5%;
+  padding-top: 2%;
 }
 h1, h2{
   font-family: 'Nunito', sans-serif;
@@ -199,6 +199,9 @@ img.nuevo{
 }
 .titulo-faq {
   margin-top: 5%;
+}
+.faqConteiner{
+  font-size: 1.2em;
 }
 /* FAQ */
 
@@ -390,7 +393,7 @@ a.links{
   background: #16A2B8 !important;
   color: white !important;
   position: relative;
-  z-index: 3;   
+  z-index: 3;
   width: 75%;
   padding-left: 5%;
   padding-right: 5%;
@@ -415,7 +418,7 @@ a.links{
 .input_pass
 .input_confirmpass:focus {
   box-shadow: none !important;
-  outline: 0px !important;  
+  outline: 0px !important;
 }
 #registro{
   font-size: 13px;

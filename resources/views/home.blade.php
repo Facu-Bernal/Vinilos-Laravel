@@ -7,7 +7,7 @@
 <div class="container">
   <main class="main_home">
     <section class="carrusel">
-      <h1>Lorem ipsum dolor sit.</h1>
+      {{-- <h1>Lorem ipsum dolor sit.</h1> --}}
       <div class="container text-center my-3">
         <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
           <div class="carousel-inner w-100" role="listbox">
@@ -43,7 +43,7 @@
         </div>
       </div>
     </section>
-    <h2>Lorem ipsum dolor sit.</h2>
+    {{-- <h1>Novedades</h1>
     <hr class="rgba-white-light width=100%">
     <section class="tarjetas">
       <div class="card-deck row">
@@ -65,7 +65,7 @@
           </div>
         @endforeach
       </div>
-    </section>
+    </section> --}}
     <hr class="rgba-white-light width=100%">
     <section class="accesos">
       <div class="row inspirate">
