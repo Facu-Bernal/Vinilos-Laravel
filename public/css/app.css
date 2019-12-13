@@ -120,6 +120,7 @@ i.fas.fa{
   float: left;
   margin-bottom: 10px;
   padding-left: 2px;
+  z-index: 3;
 }
 #li3{
   display: inline;
