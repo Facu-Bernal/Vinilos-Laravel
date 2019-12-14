@@ -30,15 +30,23 @@
                 </li>
               @endif
           @else
-            <li class="dropdown">
-              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            <li class="dropdown" id="logout">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
                 {{ Auth::user()->name }} <span class="caret"></span>
               </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                          {{ __('Logout') }}
-                </a>
-              </div>
+              <a href="/perfil">{{__('Perfil')}}</a>
+                {{-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> --}}
+
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                {{-- </div> --}}
             </li>
           @endguest
           </ul>
@@ -47,7 +55,7 @@
     </nav>
     <section>
       <div class="grad" id="background">
-        <a href="/home" class=""><img src="img/1.jpg" alt="" class="logo"></a>
+        <a href="/home"><img src="img/1.jpg" alt="logo_vinilos" class="logo"></a>
       </div>
     </section>
     <section>

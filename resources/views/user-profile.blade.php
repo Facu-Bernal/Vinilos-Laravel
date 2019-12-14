@@ -1,11 +1,10 @@
-@extends('/layout/plantilla')
+@extends('layouts.app')
 @extends('header')
-@extends('footer')
 
 @section('title', 'User-profile')
 
 @section('contenido')
-    <div class="container mt-6">
+    <div class="container mt-3">
         <div class="row">
             <div class="col-lg-4 pb-5">
                 <!-- Account Sidebar-->
@@ -24,52 +23,86 @@
                     <nav class="list-group list-group-flush">
                         <a class="list-group-item" href="#"></a>
                         <a class="list-group-item active" href="#"><i class="fe-icon-user text-muted"></i>Mis Datos</a>
-                        <a class="list-group-item" href="#perf-datosPersonales"><i class="fe-icon-map-pin text-muted"></i>Datos Personales</a>
-                        <a class="list-group-item" href="#perf-datosDeEnvio"><i class="fe-icon-map-pin text-muted"></i>Datos de Envio</a>
-                        <a class="list-group-item" href="#perf-articulos"><i class="fe-icon-map-pin text-muted"></i>Articulos</a>
+                        <a class="list-group-item" href="#perf-articulos"><i class="fe-icon-map-pin text-muted"></i>Mis Articulos</a>
                     </nav>
                 </div>
             </div>
             <!-- Profile Settings-->
-          <div >
-            <div class="col-lg-8 pb-5" id="perf-datosPersonales">
-                <form class="row">
+            <div class="col-lg-8 pb-5">
+              <div  id="perf-datosPersonales">
+                <form class="row" method="POST" action="/updateData">
+                  @csrf
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-fn">Nombre</label>
-                            <input class="form-control" type="text" id="account-fn" value="" require_onced="">
-                        </div>
+                      <div class="form-group">
+                        <label for="account-fn">Nombre</label>
+                        <input id="name" type="text" class="form-control" value="{{ Auth::user()->name }}" disabled="">
+                      </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="account-fn">Apellido</label>
-                            <input class="form-control" type="text" id="account-fn" value="" require_onced="">
+                            <input class="form-control" type="text" id="last_name" value="{{ Auth::user()->last_name }}" disabled="">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="account-email">E-mail</label>
-                            <input class="form-control" type="email" id="account-email" value="" disabled="">
+                            <input class="form-control" type="email" id="email" value="{{ Auth::user()->email }}" disabled="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="account-phone">Documento</label>
+                        <input class="form-control  @error('dni') is-invalid @enderror" type="text" id="dni" value="{{ Auth::user()->dni }}" require_onced="">
+                        @error('dni')
+                        <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-pass">Telefono</label>
+                            <input class="form-control" type="number" id="telefono" {{ Auth::user()->telefono }}>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="account-phone">Telefono</label>
-                            <input class="form-control" type="text" id="account-phone" value="" require_onced="">
+                            <label for="account-confirm-pass">Provincia</label>
+                            <input class="form-control" type="text" id="provincia" {{ Auth::user()->provincia }}>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="account-pass">Contraseña Nueva</label>
-                            <input class="form-control" type="password" id="account-pass">
+                            <label for="account-confirm-pass">Localidad</label>
+                            <input class="form-control" type="text" id="localidad" {{ Auth::user()->localidad }}>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="account-confirm-pass">Confirmar Contraseña</label>
-                            <input class="form-control" type="password" id="account-confirm-pass">
+                            <label for="account-confirm-pass">Calle</label>
+                            <input class="form-control" type="text" id="calle" {{ Auth::user()->calle }}>
                         </div>
-                    </div>
+                    </div>  <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="account-confirm-pass">Numero</label>
+                              <input class="form-control" type="number" id="numero" {{ Auth::user()->numero }}>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="account-confirm-pass">Piso/Departamento</label>
+                              <input class="form-control" type="text" id="pisoDep" {{ Auth::user()->pisoDep }}>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="account-confirm-pass">Codigo Postal</label>
+                              <input class="form-control" type="text" id="codPostal" {{ Auth::user()->codPostal }}>
+                          </div>
+                      </div>
+
                     <div class="col-12">
                         <hr class="mt-2 mb-3">
                         <div class="d-flex flex-wrap justify-content-between align-items-center">
@@ -77,100 +110,14 @@
                         </div>
                     </div>
                 </form>
+              </div>
             </div>
-            <div class="col-lg-8 pb-5" id="perf-datosDeEnvio">
-                <form class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-fn">Nombre</label>
-                            <input class="form-control" type="text" id="account-fn" value="" require_onced="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-fn">Apellido</label>
-                            <input class="form-control" type="text" id="account-fn" value="" require_onced="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-email">E-mail</label>
-                            <input class="form-control" type="email" id="account-email" value="" disabled="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-phone">Telefono</label>
-                            <input class="form-control" type="text" id="account-phone" value="" require_onced="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-pass">Contraseña Nueva</label>
-                            <input class="form-control" type="password" id="account-pass">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-confirm-pass">Confirmar Contraseña</label>
-                            <input class="form-control" type="password" id="account-confirm-pass">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <hr class="mt-2 mb-3">
-                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                          <button class="btn btn-style-1 btn-primary" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Actualizar Perfil</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-8 pb-5" id="perf-articulos">
-                <form class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-fn">Nombre</label>
-                            <input class="form-control" type="text" id="account-fn" value="" require_onced="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-fn">Apellido</label>
-                            <input class="form-control" type="text" id="account-fn" value="" require_onced="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-email">E-mail</label>
-                            <input class="form-control" type="email" id="account-email" value="" disabled="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-phone">Telefono</label>
-                            <input class="form-control" type="text" id="account-phone" value="" require_onced="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-pass">Contraseña Nueva</label>
-                            <input class="form-control" type="password" id="account-pass">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-confirm-pass">Confirmar Contraseña</label>
-                            <input class="form-control" type="password" id="account-confirm-pass">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <hr class="mt-2 mb-3">
-                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                          <button class="btn btn-style-1 btn-primary" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Actualizar Perfil</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-          </div>
         </div>
-    </div>
+      </div>
+    <script type="text/javascript">
+    window.onload=function(){
+      var barra = document.querySelector(".shift");
+      barra.style.display="none";
+    }
+    </script>
 @endsection

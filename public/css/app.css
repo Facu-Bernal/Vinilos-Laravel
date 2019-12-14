@@ -74,6 +74,7 @@ div.shift #nav2 ul li a:hover:after {
   position: relative;
   top: 7px;
   margin: 0 auto;
+  z-index: 2;
 }
 .grad{
   background-image: linear-gradient(to right, #16A2B8,#92D3DE,#FFFFFF);
@@ -138,6 +139,7 @@ i.fas.fa{
   text-align: right;
   padding-right: 14px;
 }
+
 /* Header */
 
 /* Main */
@@ -551,6 +553,7 @@ a.links{
     float: right;
     margin-bottom: 10px;
     padding-left: 2px;
+    z-index: 3;
   }
   ul.navbar-nav{
     position: relative;
