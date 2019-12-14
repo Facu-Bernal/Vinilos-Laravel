@@ -32,6 +32,7 @@
               <div  id="perf-datosPersonales">
                 <form class="row" method="POST" action="/updateData">
                   @csrf
+                  <input type="hidden" name="" value="{{Auth::user()->id}}">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="account-fn">Nombre</label>
@@ -62,44 +63,64 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-pass">Telefono</label>
-                            <input class="form-control" type="number" id="telefono" {{ Auth::user()->telefono }}>
-                        </div>
+                      <div class="form-group">
+                          <label for="account-pass">Telefono</label>
+                          <input class="form-control  @error('telefono') is-invalid @enderror" type="number" id="telefono" {{ Auth::user()->telefono }}>
+                          @error('telefono')
+                          <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                          @enderror
+                      </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-confirm-pass">Provincia</label>
-                            <input class="form-control" type="text" id="provincia" {{ Auth::user()->provincia }}>
-                        </div>
+                      <div class="form-group">
+                        <label for="account-confirm-pass">Provincia</label>
+                        <input class="form-control @error('provincia') is-invalid @enderror" type="text" id="provincia" {{ Auth::user()->provincia }}>
+                          @error('provincia')
+                          <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                          @enderror
+                      </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-confirm-pass">Localidad</label>
-                            <input class="form-control" type="text" id="localidad" {{ Auth::user()->localidad }}>
-                        </div>
+                      <div class="form-group">
+                        <label for="account-confirm-pass">Localidad</label>
+                        <input class="form-control @error('localidad') is-invalid @enderror" type="text" id="localidad" {{ Auth::user()->localidad }}>
+                          @error('localidad')
+                          <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                          @enderror
+                      </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-confirm-pass">Calle</label>
-                            <input class="form-control" type="text" id="calle" {{ Auth::user()->calle }}>
-                        </div>
+                      <div class="form-group">
+                        <label for="account-confirm-pass">Calle</label>
+                        <input class="form-control @error('calle') is-invalid @enderror" type="text" id="calle" {{ Auth::user()->calle }}>
+                          @error('calle')
+                          <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                          @enderror
+                      </div>
                     </div>  <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="account-confirm-pass">Numero</label>
-                              <input class="form-control" type="number" id="numero" {{ Auth::user()->numero }}>
-                          </div>
+                      <div class="form-group">
+                        <label for="account-confirm-pass">Numero</label>
+                        <input class="form-control @error('numero') is-invalid @enderror" type="number" id="numero" {{ Auth::user()->numero }}>
+                        </div>
                       </div>
                       <div class="col-md-6">
                           <div class="form-group">
                               <label for="account-confirm-pass">Piso/Departamento</label>
-                              <input class="form-control" type="text" id="pisoDep" {{ Auth::user()->pisoDep }}>
+                              <input class="form-control @error('pisoDep') is-invalid @enderror" type="text" id="pisoDep" {{ Auth::user()->pisoDep }}>
                           </div>
                       </div>
                       <div class="col-md-6">
                           <div class="form-group">
                               <label for="account-confirm-pass">Codigo Postal</label>
-                              <input class="form-control" type="text" id="codPostal" {{ Auth::user()->codPostal }}>
+                              <input class="form-control @error('codPostal') is-invalid @enderror" type="text" id="codPostal" {{ Auth::user()->codPostal }}>
                           </div>
                       </div>
 
