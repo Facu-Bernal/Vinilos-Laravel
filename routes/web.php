@@ -30,6 +30,10 @@ Route::get('/contacto', function(){
    return view('contacto');
  });
 
+ Route::get('/carrito', function(){
+  return view('carrito');
+});
+
 Route::get('/cocina', 'VinilosController@cocina');
 
 Route::get('/living', 'VinilosController@living');

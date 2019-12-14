@@ -93,7 +93,7 @@
             <div>
               <ul>
                 <li id="li6">
-                  <a id="carrito" href="carrito.php" <?php echo (empty($_SESSION["CARRITO"])) ? 0 : count($_SESSION["CARRITO"]); ?>>Mi CARRITO<i class="fas fa-shopping-cart"></i></a>
+                  <a id="carrito" href="/carrito">Mi CARRITO<i class="fas fa-shopping-cart"></i></a>
                 </li>
               </ul>
             </div>

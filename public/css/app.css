@@ -317,13 +317,17 @@ a.links{
   position: relative;
   bottom: 10%;
 }
-.login_btn {
+
+
+.register_btn {
   width: 100%;
   background: #16A2B8 !important;
   color: white !important;
-  position: relative;
+  position: inherit;
+  right: 123%;
   z-index: 2;
 }
+
 .login_btn:focus {
   box-shadow: none !important;
   outline: 0px !important;
@@ -388,20 +392,10 @@ a.links{
   border-radius: 50%;
   display: block;
   position: relative;
-  bottom: 23px;
+  bottom: 67px;
   margin: 0 auto;
 }
 
-.registro_btn {
-  background: #16A2B8 !important;
-  color: white !important;
-  position: relative;
-  z-index: 3;
-  width: 75%;
-  padding-left: 5%;
-  padding-right: 5%;
-  left: 40px;
-}
 .registro_btn:focus {
   box-shadow: none !important;
   outline: 0px !important;
@@ -524,6 +518,29 @@ a.links{
         border-radius: 50%;
     }
 }
+/* Carrito */
+#carrito_detalle{
+  margin-top: 5%;
+}
+#carrito_total{
+  width: 548px;
+  position: relative;
+  left: 37rem;
+}
+#total p{
+  width: 400px;
+}
+#total li{
+  width: 400px;
+}
+#boton_total{
+  position: relative;
+  left: 135%;
+}
+#detalle{
+
+}
+/* Carrito */
 
 
 

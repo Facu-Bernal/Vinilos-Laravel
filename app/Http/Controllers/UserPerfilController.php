@@ -32,11 +32,11 @@ class UserPerfilController extends Controller
       'max:45' => "El campo :attribute solo acepta "
     ];
 
-    $this->validate($req, $reglas,$mensajes)
+    $this->validate($req, $reglas,$mensajes);
 
 
     // cada campo de req va a ser una columna de la tabla
-    $user->name = $req["name"],
+    $user->name = $req["name"];
 
 
     $user->save();

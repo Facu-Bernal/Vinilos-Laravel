@@ -63,7 +63,7 @@
             </div>
 
 
-            <button class="btn login_btn" type="submit">Registrate</button>
+            <button class="btn register_btn" type="submit">Registrate</button>
             <!-- <section>
               <p id="registro">o registráte con:</p>
 
