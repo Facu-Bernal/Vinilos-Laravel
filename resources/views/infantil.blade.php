@@ -27,9 +27,17 @@
                             <input type="hidden" name="precio" id="precio" value="{{ $vinilo->precio }}">
                             <input type="hidden" name="cantidad" id="cantidad" value="{{ 1 }}">
                             <button class="btn btn-info" name="btnAccion" value="Agregar" type="submit">
-                                Agregar
+                                <i class="fas fa-cart-plus"></i>
                             </button>
                         </form>
+                        <button type="button" class="btn btn-info d-flex" data-toggle="modal" data-target="#infantil1">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="infantil1" class="modal fade " tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <img src="img/infantil 1.jpg" class="img-100 img-fluid">
                     </div>
                 </div>
             </div>

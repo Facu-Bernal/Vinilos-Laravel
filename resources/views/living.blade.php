@@ -27,9 +27,17 @@
                             <input type="hidden" name="precio" id="precio" value="{{ $vinilo->precio }}">
                             <input type="hidden" name="cantidad" id="cantidad" value="{{ 1 }}">
                             <button class="btn btn-info" name="btnAccion" value="Agregar" type="submit">
-                                Agregar
+                                <i class="fas fa-cart-plus"></i>
                             </button>
                         </form>
+                        <button type="button" class="btn btn-info d-flex" data-toggle="modal" data-target="#living1">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div id="living1" class="modal fade " tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <img src="img/living 1.jpg" class="img-100 img-fluid">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -37,10 +45,10 @@
         </div>
     </section>
 </div>
-<script type="text/javascript">
+{{-- <script type="text/javascript">
 window.onload=function(){
   var mainLiving = document.querySelector(".home-main");
   mainLiving.style.backgroundColor="red";
 }
-</script>
+</script> --}}
 @endsection

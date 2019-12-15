@@ -11,7 +11,7 @@
                 <div class="author-card pb-3">
                     <div class="author-card-cover" style="background-image: url(img/1.jpg);"></div>
                     <div class="author-card-profile">
-                        <div class="author-card-avatar"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Daniel Adams">
+                        <div class="author-card-avatar"><img class="perfil" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Daniel Adams">
                         </div>
                         <div class="author-card-details">
                             <h5 class="author-card-name text-lg">Daniel Adams</h5>
@@ -22,7 +22,7 @@
                 <div class="wizard">
                     <nav class="list-group list-group-flush">
                         <a class="list-group-item" href="#"></a>
-                        <a class="list-group-item active" href="#"><i class="fe-icon-user text-muted"></i>Mis Datos</a>
+                        <a class="list-group-item" href="#"><i class="fe-icon-user text-muted"></i>Mis Datos</a>
                         <a class="list-group-item" href="#perf-articulos"><i class="fe-icon-map-pin text-muted"></i>Mis Articulos</a>
                     </nav>
                 </div>
@@ -127,7 +127,7 @@
                     <div class="col-12">
                         <hr class="mt-2 mb-3">
                         <div class="d-flex flex-wrap justify-content-between align-items-center">
-                          <button class="btn btn-style-1 btn-primary" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Actualizar Perfil</button>
+                          <button class="btn btn-style-1 btn-info" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Actualizar Perfil</button>
                         </div>
                     </div>
                 </form>

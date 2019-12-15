@@ -21,16 +21,26 @@
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">{{ $vinilo->nombre }}</h4>
+                        <h5 class="card-title">${{ $vinilo->precio }}</h5>
                         <form action="" method="post">
                             <input type="hidden" name="id" id="id" value="{{ $vinilo->id }}">
                             <input type="hidden" name="descripcion" id="descripcion" value="{{ $vinilo->descripcion }}">
                             <input type="hidden" name="precio" id="precio" value="{{ $vinilo->precio }}">
                             <input type="hidden" name="cantidad" id="cantidad" value="{{ 1 }}">
                             <button class="btn btn-info" name="btnAccion" value="Agregar" type="submit">
-                                Agregar
+                                <i class="fas fa-cart-plus"></i>
                             </button>
                         </form>
+                        <button type="button" class="btn btn-info d-flex" data-toggle="modal" data-target="#cocina1">
+                        <i class="fas fa-eye"></i>
+                        </button>
                     </div>
+                    <div id="cocina1" class="modal fade " tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <img src="img/cocina 1.jpg" class="img-100 img-fluid">
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             @endforeach

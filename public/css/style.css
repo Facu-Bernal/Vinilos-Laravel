@@ -92,10 +92,13 @@ li{
   overflow: hidden;
   padding-top: 5px;
 }
+i.fas{
+  position: relative;
+  left: 7px;
+}
 i.fas.fa{
   position: relative;
-  left: 5px;
-
+  right: 7px;
 }
 #li1{
   display: none;
@@ -114,7 +117,16 @@ i.fas.fa{
   float: left;
   margin-bottom: 10px;
   padding-left: 2px;
-
+  z-index: 3;
+  position: absolute;
+  bottom: 11px;
+  right: 18px;
+ 
+}
+#ul4{
+  position: absolute;
+  bottom: 6px;
+  right: 207px;
 }
 #li3{
   display: inline;

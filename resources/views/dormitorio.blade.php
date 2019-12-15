@@ -6,7 +6,7 @@
 @section('contenido')
 <div class="container" style="margin: 0 auto" ;>
     <div class="row inspirate-seccion">
-       <img id="btn" src="img/Dormitorio.png" alt="">
+        <img id="btn" src="img/Dormitorio.png" alt="">
     </div>
     <section class="tarjetas">
         <div class="card-deck row">
@@ -27,9 +27,17 @@
                             <input type="hidden" name="precio" id="precio" value="{{ $vinilo->precio }}">
                             <input type="hidden" name="cantidad" id="cantidad" value="{{ 1 }}">
                             <button class="btn btn-info" name="btnAccion" value="Agregar" type="submit">
-                                Agregar
+                                <i class="fas fa-cart-plus"></i>
                             </button>
                         </form>
+                        <button type="button" class="btn btn-info d-flex" data-toggle="modal" data-target="#dormitorio1">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div id="dormitorio1" class="modal fade " tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <img src="img/dormitorio 1.jpg" class="img-100 img-fluid">
+                        </div>
                     </div>
                 </div>
             </div>
