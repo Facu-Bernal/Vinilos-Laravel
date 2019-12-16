@@ -44,4 +44,4 @@ Route::get('/infantil', 'VinilosController@infantil');
 
 Route::get('/perfil', 'UserPerfilController@showperfil');
 
-Route::get('/updateData', 'UserPerfilController@updateData');
+Route::post('/updateData', 'UserPerfilController@updateData');

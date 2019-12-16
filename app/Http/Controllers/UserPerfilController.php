@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+// use App\Usuario;
 
 class UserPerfilController extends Controller
 {
@@ -14,32 +16,40 @@ class UserPerfilController extends Controller
 
   public function updateData(Request $req){
 
-    $user = find($req["id"]);
+   $user = User::find($req["id"]);
 
     $reglas=[
-        'documento' => ['required', 'number', 'max:8'],
-        'telefono' => ['required', 'string', 'max:45'],
-        'provincia' => ['required', 'string', 'max:45'],
-        'localidad' => ['required', 'string', 'max:45'],
-        'calle' => ['required', 'string', 'max:45'],
-        'numero' => ['required', 'number',  'max:11'],
-        'pisoDep' => ['required', 'string','max:45'],
-        'codPostal' => ['required', 'string', 'max:45']
+        'Documento' => 'string|max:8|nullable',
+        'Telefono' => 'string|max:45|nullable',
+        'Provincia' => 'string|max:45|nullable',
+        'Localidad' => 'string|max:45|nullable',
+        'Domicilio' => 'string|max:45|nullable',
+        'Piso/Departamento' => 'string|max:45|nullable',
+        'CodigoPostal' => 'string|max:45|nullable'
     ];
 
     $mensajes = [
-      'required' => "El campo :attribute es requerido",
-      'max:45' => "El campo :attribute solo acepta "
+      'integer' => "El campo :attribute debe contener solo numeros",
+      'max' => "El campo :attribute acepta hasta :max"
     ];
+
 
     $this->validate($req, $reglas,$mensajes);
 
+    $user->dni = $req["Documento"];
+    $user->telefono = $req["Telefono"];
+    $user->provincia = $req["Provincia"];
+    $user->localidad = $req["Localidad"];
+    $user->domicilio = $req["Domicilio"];
+    $user->pisoDep = $req["Piso/Departamento"];
+    $user->codPostal = $req["CodigoPostal"];
 
-    // cada campo de req va a ser una columna de la tabla
-    $user->name = $req["name"];
 
 
     $user->save();
+
+    return view("/user-profile");
+
 
   }
 }

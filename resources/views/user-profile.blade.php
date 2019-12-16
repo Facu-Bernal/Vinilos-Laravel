@@ -14,7 +14,7 @@
                         <div class="author-card-avatar"><img class="perfil" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Daniel Adams">
                         </div>
                         <div class="author-card-details">
-                            <h5 class="author-card-name text-lg">Daniel Adams</h5>
+                            <h5 class="author-card-name text-lg"></h5>
                             <!-- <span class="author-card-position">Admin. Septiembre 05, 2019</span> -->
                         </div>
                     </div>
@@ -30,106 +30,96 @@
             <!-- Profile Settings-->
             <div class="col-lg-8 pb-5">
               <div  id="perf-datosPersonales">
-                <form class="row" method="POST" action="/updateData">
-                  @csrf
-                  <input type="hidden" name="" value="{{Auth::user()->id}}">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="account-fn">Nombre</label>
-                        <input id="name" type="text" class="form-control" value="{{ Auth::user()->name }}" disabled="">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-fn">Apellido</label>
-                            <input class="form-control" type="text" id="last_name" value="{{ Auth::user()->last_name }}" disabled="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="account-email">E-mail</label>
-                            <input class="form-control" type="email" id="email" value="{{ Auth::user()->email }}" disabled="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="account-phone">Documento</label>
-                        <input class="form-control  @error('dni') is-invalid @enderror" type="text" id="dni" value="{{ Auth::user()->dni }}" require_onced="">
-                        @error('dni')
-                        <span class="invalid-feedback" role="alert">
-                          <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                          <label for="account-pass">Telefono</label>
-                          <input class="form-control  @error('telefono') is-invalid @enderror" type="number" id="telefono" {{ Auth::user()->telefono }}>
-                          @error('telefono')
-                          <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                          </span>
-                          @enderror
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="account-confirm-pass">Provincia</label>
-                        <input class="form-control @error('provincia') is-invalid @enderror" type="text" id="provincia" {{ Auth::user()->provincia }}>
-                          @error('provincia')
-                          <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                          </span>
-                          @enderror
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="account-confirm-pass">Localidad</label>
-                        <input class="form-control @error('localidad') is-invalid @enderror" type="text" id="localidad" {{ Auth::user()->localidad }}>
-                          @error('localidad')
-                          <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                          </span>
-                          @enderror
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="account-confirm-pass">Calle</label>
-                        <input class="form-control @error('calle') is-invalid @enderror" type="text" id="calle" {{ Auth::user()->calle }}>
-                          @error('calle')
-                          <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                          </span>
-                          @enderror
-                      </div>
-                    </div>  <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="account-confirm-pass">Numero</label>
-                        <input class="form-control @error('numero') is-invalid @enderror" type="number" id="numero" {{ Auth::user()->numero }}>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="account-confirm-pass">Piso/Departamento</label>
-                              <input class="form-control @error('pisoDep') is-invalid @enderror" type="text" id="pisoDep" {{ Auth::user()->pisoDep }}>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="account-confirm-pass">Codigo Postal</label>
-                              <input class="form-control @error('codPostal') is-invalid @enderror" type="text" id="codPostal" {{ Auth::user()->codPostal }}>
-                          </div>
-                      </div>
+                {{-- Errores --}}
+                <ul style="color:red" class="errors">
+                  @foreach ($errors->all() as $error)
+                    <li>
+                      {{$error}}
+                    </li>
+                  @endforeach
+                </ul>
 
-                    <div class="col-12">
-                        <hr class="mt-2 mb-3">
-                        <div class="d-flex flex-wrap justify-content-between align-items-center">
-                          <button class="btn btn-style-1 btn-info" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Actualizar Perfil</button>
-                        </div>
+                {{-- Formulario Update Perfil Usuario --}}
+                <form class="row" method="POST" action="/updateData">
+                  {{csrf_field()}}
+                  <input type="hidden" name="id" id="{{Auth::user()->id}}" value="{{Auth::user()->id}}">
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="account-fn">Nombre</label>
+                      <input id="name" type="text" class="form-control" value="{{ Auth::user()->name }}" disabled="">
                     </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="account-fn">Apellido</label>
+                      <input class="form-control" type="text" id="last_name" value="{{ Auth::user()->last_name }}" disabled="">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email">E-mail</label>
+                      <input class="form-control" type="email" name="Email" id="email" value="{{ Auth::user()->email }}" disabled="">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="Documento">Documento</label>
+                      <input class="form-control" type="text" id="dni" name="Documento" value="" placeholder="{{ Auth::user()->dni }}">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="Telefono">Telefono</label>
+                      <input class="form-control" type="text" name="Telefono" id="Telefono" value="{{ Auth::user()->telefono }}">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="Provincia">Provincia</label>
+                      <input class="form-control" type="text" name="Provincia" id="provincia" value="{{ Auth::user()->provincia }}">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="Localidad">Localidad</label>
+                      <input class="form-control" type="text" name="Localidad" id="localidad" value="{{ Auth::user()->localidad }}">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="Domicilio">Domicilio</label>
+                      <input class="form-control" type="text" name="Domicilio" id="calle" value="{{ Auth::user()->domicilio }}">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="Piso/Departamento">Piso/Departamento</label>
+                      <input class="form-control" type="text" name="Piso/Departamento" id="pisoDep" value="{{ Auth::user()->pisoDep }}">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="CodigoPostal">Codigo Postal</label>
+                      <input class="form-control" type="text" name="CodigoPostal" id="codPostal" value="{{ Auth::user()->codPostal }}">
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <hr class="mt-2 mb-3">
+                      <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <button class="btn btn-style-1 btn-info" type="summit" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Actualizar Perfil</button>
+                      </div>
+                  </div>
                 </form>
               </div>
             </div>
@@ -139,6 +129,9 @@
     window.onload=function(){
       var barra = document.querySelector(".shift");
       barra.style.display="none";
+      var h5 = document.querySelector("h5");
+      var nombreCompleto = "{{ Auth::user()->name }}"+" "+"{{ Auth::user()->last_name }}";
+      h5.append(nombreCompleto);
     }
     </script>
 @endsection
