@@ -17,24 +17,7 @@ Route::get('/home', 'VinilosController@lista');
 
 Route::get('/', 'VinilosController@lista');
 
- Route::get('/faq', function () {
-     return view('faq');
- });
-Route::get('/envios', function(){
-   return view('envios');
- });
- Route::get('/pagos', function(){
-  return view('pagos');
- });
-Route::get('/contacto', function(){
-   return view('contacto');
- });
-
- Route::get('/carrito', function(){
-  return view('carrito');
-});
-
-Route::get('/cocina', 'VinilosController@cocina');
+ Route::get('/cocina', 'VinilosController@cocina');
 
 Route::get('/living', 'VinilosController@living');
 
@@ -45,3 +28,24 @@ Route::get('/infantil', 'VinilosController@infantil');
 Route::get('/perfil', 'UserPerfilController@showperfil');
 
 Route::post('/updateData', 'UserPerfilController@updateData');
+
+Route::get('/mcpg', function () {
+    return view('mercadopago');
+});
+
+Route::get('/faq', function () {
+    return view('faq');
+});
+Route::get('/envios', function(){
+  return view('envios');
+});
+Route::get('/pagos', function(){
+ return view('pagos');
+});
+Route::get('/contacto', function(){
+  return view('contacto');
+});
+
+Route::get('/carrito', function(){
+ return view('carrito');
+});
