@@ -1,3 +1,4 @@
+-- Crear Usuarios
 CREATE TABLE `users` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -18,3 +19,18 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+--Modificacion en Productos
+update productos set categoria_id=3 where nombre='Vinilo Living';
+update productos set categoria_id=2 where nombre='Vinilo Dormitorio';
+update productos set categoria_id=5 where nombre='Vinilo Infantil';
+update productos set categoria_id=1 where nombre='Vinilo Cocina';
+
+--Modificaciones en Categorias
+update categorias set nombre='Vinilos Cocina' where id=1;
+update categorias set nombre='Vinilos Dormitorio' where id=2;
+update categorias set nombre='Vinilos Livings' where id=3;
+update categorias set nombre='Vinilos Baño' where id=4;
+update categorias set nombre='Vinilos Infantiles' where id=5;
+--

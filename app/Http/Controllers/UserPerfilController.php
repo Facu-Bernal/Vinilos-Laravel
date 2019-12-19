@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-// use App\Usuario;
+use App\Vinilo;
+use App\Categoria;
+
 
 class UserPerfilController extends Controller
 {
   public function showperfil(){
+    $vinilos = vinilo::all();
 
-     return view('user-profile');
+    $vac= compact('vinilos');
+
+     return view('user-profile',$vac);
 
   }
 

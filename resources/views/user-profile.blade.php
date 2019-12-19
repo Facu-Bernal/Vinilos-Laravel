@@ -21,7 +21,6 @@
                 </div>
                 <div class="wizard">
                     <nav class="list-group list-group-flush">
-                        <a class="list-group-item" href="#"></a>
                         <a class="list-group-item" href="#"><i class="fe-icon-user text-muted"></i>Mis Datos</a>
                         <a class="list-group-item" href="#perf-articulos"><i class="fe-icon-map-pin text-muted"></i>Mis Articulos</a>
                     </nav>
@@ -124,11 +123,58 @@
               </div>
             </div>
         </div>
+        <div class="row" id="perf-articulos">
+          <h3>Articulos</h3>
+          <button class="btn btn-danger" type="button" name="btnAccion"><a href="agregarVinilo">Agregar</a> </button>
+          <div class="table-responsive">
+            @foreach ($vinilos as $vinilo)
+            <table class="table table-bordered">
+              <tbody>
+                {{-- Titulos --}}
+                <tr>
+                  <th class="text-center">Imagen</th>
+                  <th class="text-center">Nombre</th>
+                  <th class="text-center">Descripcion</th>
+                  <th class="text-center">Categoria</th>
+                  <th class="text-center">Precio</th>
+                  <th class="text-center">---</th>
+                </tr>
+                  {{-- Detalle --}}
+                <tr>
+                  <td class="text-center">{{$vinilo->nombre}}</td>
+                  <td class="text-center">{{$vinilo->imagen}}</td>
+                  <td class="text-center">{{$vinilo->descripcion}}</td>
+                  <td class="text-center">{{$vinilo->categoria->nombre}}</td>
+                  <td class="text-center">{{"$"}}{{$vinilo->precio}}</td>
+                  <td class="text-center">
+                    {{-- Modificar --}}
+                  <form action="modificarVinilo" method="post">
+                    <input type="hidden" id="id" name="id" value="{{$vinilo->id}}">
+                    <button class="btn btn-danger" type="submit" name="btnAccion">
+                       Modificar
+                     </button>
+                  </form>
+                    {{-- Eliminar --}}
+                  <form action="eliminarVinilo" method="post">
+                    <input type="hidden" id="id" name="id" value="{{$vinilo->id}}">
+                    <button class="btn btn-danger" type="submit" name="btnAccion">
+                      Eliminar
+                    </button>
+                  </form>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            @endforeach
+          </div>
+        </div>
       </div>
     <script type="text/javascript">
     window.onload=function(){
-      var barra = document.querySelector(".shift");
-      barra.style.display="none";
+      var navbar = document.querySelector(".shift");
+      navbar.style.display="none";
+      var topnavbar = document.querySelector("#nav1");
+      topnavbar.style.display="none";
       var h5 = document.querySelector("h5");
       var nombreCompleto = "{{ Auth::user()->name }}"+" "+"{{ Auth::user()->last_name }}";
       h5.append(nombreCompleto);

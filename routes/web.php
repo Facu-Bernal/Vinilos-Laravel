@@ -13,6 +13,8 @@
 
 Auth::routes();
 
+// Vinilos
+
 Route::get('/home', 'VinilosController@lista');
 
 Route::get('/', 'VinilosController@lista');
@@ -25,13 +27,19 @@ Route::get('/dormitorio', 'VinilosController@dormitorio');
 
 Route::get('/infantil', 'VinilosController@infantil');
 
+Route::post('/eliminarVinilo', 'VinilosController@borrarVinilo');
+
+Route::get('/modificarVinilo', 'VinilosController@modificarVinilo');
+
+Route::get('/agregarVinilo', 'VinilosController@agregarVinilo');
+
+// Usuarios
+
 Route::get('/perfil', 'UserPerfilController@showperfil');
 
 Route::post('/updateData', 'UserPerfilController@updateData');
 
-Route::get('/mcpg', function () {
-    return view('mercadopago');
-});
+
 
 Route::get('/faq', function () {
     return view('faq');
