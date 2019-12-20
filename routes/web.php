@@ -29,9 +29,13 @@ Route::get('/infantil', 'VinilosController@infantil');
 
 Route::post('/eliminarVinilo', 'VinilosController@borrarVinilo');
 
-Route::get('/modificarVinilo', 'VinilosController@modificarVinilo');
+Route::post('/modificarVinilo', 'VinilosController@modificarVinilo');
 
 Route::get('/agregarVinilo', 'VinilosController@agregarVinilo');
+
+Route::get('/vinilos', 'VinilosController@listarVinilos');
+
+Route::post('/guardarViniloModificado', 'VinilosController@guardarViniloModificado');
 
 // Usuarios
 

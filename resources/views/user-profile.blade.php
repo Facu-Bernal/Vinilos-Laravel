@@ -22,7 +22,7 @@
                 <div class="wizard">
                     <nav class="list-group list-group-flush">
                         <a class="list-group-item" href="#"><i class="fe-icon-user text-muted"></i>Mis Datos</a>
-                        <a class="list-group-item" href="#perf-articulos"><i class="fe-icon-map-pin text-muted"></i>Mis Articulos</a>
+                        <a class="list-group-item" href="/vinilos"><i class="fe-icon-map-pin text-muted"></i>Mis Articulos</a>
                     </nav>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 </ul>
 
                 {{-- Formulario Update Perfil Usuario --}}
-                <form class="row" method="POST" action="/updateData">
+                <form class="row" method="POST" action="/updateData" enctype="multipart/form-data">
                   {{csrf_field()}}
                   <input type="hidden" name="id" id="{{Auth::user()->id}}" value="{{Auth::user()->id}}">
 
@@ -122,51 +122,6 @@
                 </form>
               </div>
             </div>
-        </div>
-        <div class="row" id="perf-articulos">
-          <h3>Articulos</h3>
-          <button class="btn btn-danger" type="button" name="btnAccion"><a href="agregarVinilo">Agregar</a> </button>
-          <div class="table-responsive">
-            @foreach ($vinilos as $vinilo)
-            <table class="table table-bordered">
-              <tbody>
-                {{-- Titulos --}}
-                <tr>
-                  <th class="text-center">Imagen</th>
-                  <th class="text-center">Nombre</th>
-                  <th class="text-center">Descripcion</th>
-                  <th class="text-center">Categoria</th>
-                  <th class="text-center">Precio</th>
-                  <th class="text-center">---</th>
-                </tr>
-                  {{-- Detalle --}}
-                <tr>
-                  <td class="text-center">{{$vinilo->nombre}}</td>
-                  <td class="text-center">{{$vinilo->imagen}}</td>
-                  <td class="text-center">{{$vinilo->descripcion}}</td>
-                  <td class="text-center">{{$vinilo->categoria->nombre}}</td>
-                  <td class="text-center">{{"$"}}{{$vinilo->precio}}</td>
-                  <td class="text-center">
-                    {{-- Modificar --}}
-                  <form action="modificarVinilo" method="post">
-                    <input type="hidden" id="id" name="id" value="{{$vinilo->id}}">
-                    <button class="btn btn-danger" type="submit" name="btnAccion">
-                       Modificar
-                     </button>
-                  </form>
-                    {{-- Eliminar --}}
-                  <form action="eliminarVinilo" method="post">
-                    <input type="hidden" id="id" name="id" value="{{$vinilo->id}}">
-                    <button class="btn btn-danger" type="submit" name="btnAccion">
-                      Eliminar
-                    </button>
-                  </form>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            @endforeach
-          </div>
         </div>
       </div>
     <script type="text/javascript">

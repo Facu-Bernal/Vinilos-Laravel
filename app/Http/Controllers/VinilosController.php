@@ -9,12 +9,16 @@ use App\Vinilo;
 class VinilosController extends Controller
 {
    public function lista(){
-      $vinilos = vinilo::all();
+      return view('/home');
 
-      $vac= compact('vinilos');
+   }
 
-      return view('/home', $vac);
+   public function listarVinilos(){
+     $vinilos = vinilo::all();
 
+       $vac= compact('vinilos');
+
+     return view("vinilos",$vac);
    }
 
    public function cocina(){
@@ -59,7 +63,7 @@ class VinilosController extends Controller
 
    public function eliminarVinilo(Request $req){
 
-    $vinilo = Vinilo::find($req["id"]);){
+    $vinilo = Vinilo::find($req["id"]);
 
     $vinilo->delete();
 
@@ -69,7 +73,7 @@ class VinilosController extends Controller
 
    public function modificarVinilo(Request $req){
 
-    $vinilo = Vinilo::find($req["id"]);){
+     $vinilo = Vinilo::find($req["id"]);
 
       $vac=compact('vinilo');
 
@@ -77,12 +81,46 @@ class VinilosController extends Controller
 
    }
 
-   public function agregaVinilo(){
-       return view('altaModVinilos');
+   public function agregarVinilo(){
+     return view('altaModVinilos');
    }
 
-   public function guardarVinilo(Request $req){
-       return redirect("perfil");
+   public function guardarViniloModificado(Request $req){
+
+       $vinilo = Vinilo::find($req["id"]);
+
+      $reglas=[
+          'name' => 'string|max:100|required',
+          'imagen' => 'file|required',
+          'descripcion' => 'string|max:500|required',
+          'categoria' => 'string|max:11|required',
+          'precio' => 'numeric|max:20|required',
+
+      ];
+
+      $mensajes = [
+        'float' => "El campo :attribute debe ser decimal y contener tenes hasta 20 digitos",
+        'max' => "El campo :attribute acepta hasta :max"
+      ];
+
+
+      $this->validate($req, $reglas,$mensajes);
+
+      $ruta= $req->file("img")->store("public");
+      $nombreArchivo=basename($ruta);
+
+      $vinilo->name = $req["name"];
+      $vinilo->imagen = $nombreArchivo;
+      $vinilo->descripcion = $req["descripcion"];
+      $vinilo->categoria = $req["categoria"];
+      $vinilo->precio = $req["Domicilio"];
+
+      dd($vinilo);
+      $vinilo->save();
+
+     return view("vinilos");
    }
+
+
 
 }
