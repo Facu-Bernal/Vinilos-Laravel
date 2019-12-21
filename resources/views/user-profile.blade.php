@@ -22,7 +22,7 @@
                 <div class="wizard">
                     <nav class="list-group list-group-flush">
                         <a class="list-group-item" href="#"><i class="fe-icon-user text-muted"></i>Mis Datos</a>
-                        <a class="list-group-item" href="/vinilos"><i class="fe-icon-map-pin text-muted"></i>Mis Articulos</a>
+                        <a class="list-group-item" id="linkVin" href="/vinilos"><i class="fe-icon-map-pin text-muted"></i>Mis Vinilos</a>
                     </nav>
                 </div>
             </div>
@@ -126,13 +126,24 @@
       </div>
     <script type="text/javascript">
     window.onload=function(){
-      var navbar = document.querySelector(".shift");
+
+      var ul1 = document.querySelector("#ul1");
+      ul1.style.display="none";
+
+      var ul2 = document.querySelector("#ul2");
+      ul2.style.display="none";
+
+      var navbar = document.querySelector("#nav2");
       navbar.style.display="none";
-      var topnavbar = document.querySelector("#nav1");
-      topnavbar.style.display="none";
+
       var h5 = document.querySelector("h5");
       var nombreCompleto = "{{ Auth::user()->name }}"+" "+"{{ Auth::user()->last_name }}";
       h5.append(nombreCompleto);
+    }
+
+    if ("{{ Auth::user()->name }}"!="admin") {
+      var linkVin= document.querySelector("#linkVin");
+      linkVin.style.display="none";
     }
     </script>
 @endsection

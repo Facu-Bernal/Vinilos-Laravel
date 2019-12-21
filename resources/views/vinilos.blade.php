@@ -57,10 +57,14 @@
 </div>
 <script type="text/javascript">
 window.onload=function(){
-  // var navbar = document.querySelector(".shift");
-  // navbar.style.display="none";
-  // var topnavbar = document.querySelector("#nav1");
-  // topnavbar.style.display="none";
+  var ul1 = document.querySelector("#ul1");
+  ul1.style.display="none";
+
+  var ul2 = document.querySelector("#ul2");
+  ul2.style.display="none";
+
+  var navbar = document.querySelector("#nav2");
+  navbar.style.display="none";
 }
 </script>
 @endsection
