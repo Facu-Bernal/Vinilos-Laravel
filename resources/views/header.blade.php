@@ -57,6 +57,9 @@
         </div>
         <div>
           <ul id="ul2">
+            <li id="li2">
+             <a href="cart"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span></a>
+            </li>
             <li id="li2"><a href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
             <li id="li2"><a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></li>
             <li id="li2"><a href="https://pinterest.com/"><i class="fab fa-pinterest"></i></a></li>

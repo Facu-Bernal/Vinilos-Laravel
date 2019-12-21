@@ -112,9 +112,7 @@ i.fas {
 }
 #ul2{
   position: relative;
-  left: 7%;
   margin-bottom: 10px;
-  padding-right: 2px;
 }
 
 #li2{
@@ -130,15 +128,14 @@ i.fas {
   position: absolute;
   bottom: 5px;
   right: 90px;
-  
 }
-#ul4{
+/* #ul4{
   position: relative;
   right: 10%;
   float: right;
   margin-bottom: 10px;
-  padding-right: 0
-}
+  /* padding-right: 0; */
+} */
 #li3{
   display: inline;
   padding-left: 10px;

@@ -16,6 +16,7 @@ class VinilosController extends Controller
    }
 
    public function listarVinilos(){
+
      $vinilos = vinilo::all();
 
        $vac= compact('vinilos');

@@ -11,6 +11,7 @@ use App\Categoria;
 class UserPerfilController extends Controller
 {
   public function showperfil(){
+    
     $vinilos = vinilo::all();
 
     $vac= compact('vinilos');
