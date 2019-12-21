@@ -25,7 +25,7 @@ class VinilosController extends Controller
 
    public function cocina(){
 
-      $vinilos = vinilo::where('categoria_id', 'LIKE', '1')
+      $vinilos = vinilo::where('categoria_id', '=', '1')
       ->get();
 
       $vac=compact('vinilos');
@@ -35,7 +35,7 @@ class VinilosController extends Controller
 
    public function dormitorio(){
 
-      $vinilos = vinilo::where('categoria_id', 'LIKE', '2')
+      $vinilos = vinilo::where('categoria_id', '=', '2')
       ->get();
 
       $vac=compact('vinilos');
@@ -45,7 +45,7 @@ class VinilosController extends Controller
 
    public function living(){
 
-      $vinilos = vinilo::where('categoria_id', 'LIKE', '3')
+      $vinilos = vinilo::where('categoria_id', '=', '3')
       ->get();
 
       $vac=compact('vinilos');
@@ -55,7 +55,7 @@ class VinilosController extends Controller
 
    public function infantil(){
 
-      $vinilos = vinilo::where('categoria_id', 'LIKE', '5')
+      $vinilos = vinilo::where('categoria_id', '=', '5')
       ->get();
 
       $vac=compact('vinilos');

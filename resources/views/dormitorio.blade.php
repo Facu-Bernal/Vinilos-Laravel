@@ -5,8 +5,8 @@
 @section('title', 'Dormitorio')
 @section('contenido')
 <div class="container" style="margin: 0 auto" ;>
-    <div class="row inspirate-seccion">
-        <img id="btn" src="img/Dormitorio.png" alt="">
+    <div class="row">
+        <a href="/dormitorio"><img class="inspirate-seccion" src="img/Dormitorio.png" alt=""></a>
     </div>
     <section class="tarjetas">
       <div class="row">
