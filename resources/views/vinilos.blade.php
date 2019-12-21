@@ -25,13 +25,13 @@
           {{-- Detalle --}}
         <tr>
           <td class="text-center">{{$vinilo->nombre}}</td>
-          <td class="text-center">{{$vinilo->imagen}}</td>
+          <td class="text-center"><img src="/storage/{{$vinilo->imagen}}" alt="image" style="width:255px; height:255px"></td>
           <td class="text-center">{{$vinilo->descripcion}}</td>
           <td class="text-center">{{$vinilo->categoria->nombre}}</td>
           <td class="text-center">{{"$"}}{{$vinilo->precio}}</td>
           <td class="text-center">
             {{-- Modificar --}}
-          <form action="/modificarVinilo" method="POST">
+          <form action="modificarVinilo" method="POST">
             {{csrf_field()}}
             <input type="hidden" id="id" name="id" value="{{$vinilo->id}}">
             <button class="btn btn-danger" type="submit" name="btnAccion">
@@ -57,10 +57,10 @@
 </div>
 <script type="text/javascript">
 window.onload=function(){
-  var navbar = document.querySelector(".shift");
-  navbar.style.display="none";
-  var topnavbar = document.querySelector("#nav1");
-  topnavbar.style.display="none";
+  // var navbar = document.querySelector(".shift");
+  // navbar.style.display="none";
+  // var topnavbar = document.querySelector("#nav1");
+  // topnavbar.style.display="none";
 }
 </script>
 @endsection

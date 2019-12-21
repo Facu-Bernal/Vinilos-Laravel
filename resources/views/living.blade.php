@@ -9,40 +9,23 @@
         <img id="btn" src="img/Living.png" alt="">
     </div>
     <section class="tarjetas">
-        <div class="card-deck row">
-            @foreach ($vinilos as $vinilo)
-            <div class="col-xs-12 col-sm-6 col-md-4" style="padding-bottom: 3%;">
-                <div class="card">
-                    <div class="tarjeta" class="view overlay">
-                        <img class="card-img-top" src="{{ $vinilo->imagen }}" alt="Card image cap">
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">{{ $vinilo->nombre }}</h4>
-                        <form action="" method="post">
-                            <input type="hidden" name="id" id="id" value="{{ $vinilo->id }}">
-                            <input type="hidden" name="descripcion" id="descripcion" value="{{ $vinilo->descripcion }}">
-                            <input type="hidden" name="precio" id="precio" value="{{ $vinilo->precio }}">
-                            <input type="hidden" name="cantidad" id="cantidad" value="{{ 1 }}">
-                            <button class="btn btn-info" name="btnAccion" value="Agregar" type="submit">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </form>
-                        <button type="button" class="btn btn-info d-flex" data-toggle="modal" data-target="#living1">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                    <div id="living1" class="modal fade " tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <img src="img/living 1.jpg" class="img-100 img-fluid">
-                        </div>
+      <div class="row">
+
+        @foreach($vinilos as $vinilo)
+            <div class="col-xs-18 col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img src="/storage/{{$vinilo->imagen}}" width="500" height="300">
+                    <div class="caption">
+                        <h4>{{ $vinilo->nombre }}</h4>
+                        <p>{{ str_limit(strtolower($vinilo->descripcion), 50) }}</p>
+                        <p><strong>Price: </strong>${{ $vinilo->precio }}</p>
+                        <p class="btn-holder"><a href="{{ url('add-to-cart/'.$vinilo->id) }}" class="btn btn-warning btn-block text-center" role="button">Add to cart</a> </p>
                     </div>
                 </div>
             </div>
-            @endforeach
-        </div>
+
+        @endforeach
+      </div>
     </section>
 </div>
 {{-- <script type="text/javascript">

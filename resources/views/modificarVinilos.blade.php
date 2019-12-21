@@ -22,20 +22,19 @@
        @endforeach
      </ul>
 
-     <form class="row" action="/guardarViniloModificado" method="POST" enctype="multipart/form-data">
+     <form class="row" action="/guardarModiVinilo" method="POST" enctype="multipart/form-data">
        {{csrf_field()}}
-       {{-- <input type="hidden" name="id" value="{{$vinilo->id}}"> --}}
+       <input type="hidden" name="id" value="{{$vinilo->id}}">
        <div class="col-md-12">
         <div class="form-group">
            <label for="name" style="display:block">Titulo</label>
-           <input type="text" name="name" id="name" value="">
-           {{-- {{$vinilo->nombre}} --}}
+           <input type="text" name="name" id="name" value="{{$vinilo->nombre}}" >
          </div>
        </div>
 
-       {{-- <div class="col-md-12">
+       <div class="col-md-12">
          <img src="/storage/{{$vinilo->imagen}}" alt="image">
-       </div> --}}
+       </div>
 
        <div class="col-md-12">
          <div class="form-group">
@@ -47,25 +46,27 @@
        <div class="col-md-12">
          <div class="form-group">
            <label for="descripcion" style="display:block">Descripcion</label>
-           <textarea name="descripcion" rows="8" cols="80" form="usrform"></textarea>
-           {{-- {{$vinilo->descripcion}} --}}
-           {{-- <input type="textarea" name="descript" id="descript" value="{{$vinilo->descripcion}}"> --}}
+           <textarea name="descripcion" id="descripcion" rows="8" cols="80">{{$vinilo->descripcion}}</textarea>
          </div>
        </div>
 
        <div class="col-md-12">
          <div class="form-group">
            <label for="categoria" style="display:block">Categoria</label>
-           <input type="text" name="categoria" id="categoria" >
-           {{-- value="{{$vinilo->categoria->nombre}}" --}}
+           <select class="" name="categoria" id="categoria">
+             @foreach ($categorias as $categoria)
+               <option value="{{$categoria->id}}">
+                 {{$categoria->nombre}}
+               </option>
+             @endforeach
+           </select>
          </div>
        </div>
 
        <div class="col-md-12">
          <div class="form-group">
            <label for="precio" style="display:block">Precio</label>
-           <input type="text" name="precio" id="precio">
-            {{-- value="{{$vinilo->precio}}" --}}
+           <input type="numeric" name="precio" id="precio" value="{{$vinilo->precio}}">
          </div>
        </div>
 

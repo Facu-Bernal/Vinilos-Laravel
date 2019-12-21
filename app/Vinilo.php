@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vinilo extends Model
 {
-    public $table = "productos";
+    public $table = "Vinilos";
     public $timestamps = false;
     public $guarded = [];
 

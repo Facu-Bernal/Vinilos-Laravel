@@ -15,11 +15,15 @@ Auth::routes();
 
 // Vinilos
 
-Route::get('/home', 'VinilosController@lista');
+Route::get('/home', 'VinilosController@home');
 
-Route::get('/', 'VinilosController@lista');
+Route::get('/', 'VinilosController@home');
 
- Route::get('/cocina', 'VinilosController@cocina');
+// Vinilos por categorias
+
+Route::get('/vinilos', 'VinilosController@listarVinilos');
+
+Route::get('/cocina', 'VinilosController@cocina');
 
 Route::get('/living', 'VinilosController@living');
 
@@ -27,15 +31,18 @@ Route::get('/dormitorio', 'VinilosController@dormitorio');
 
 Route::get('/infantil', 'VinilosController@infantil');
 
-Route::post('/eliminarVinilo', 'VinilosController@borrarVinilo');
-
-Route::post('/modificarVinilo', 'VinilosController@modificarVinilo');
+// Alta, modificar y eliminar Vinilos
 
 Route::get('/agregarVinilo', 'VinilosController@agregarVinilo');
 
-Route::get('/vinilos', 'VinilosController@listarVinilos');
+Route::post('/guardarAltaVinilo', 'VinilosController@guardarAltaVinilo');
 
-Route::post('/guardarViniloModificado', 'VinilosController@guardarViniloModificado');
+Route::post('/guardarModiVinilo', 'VinilosController@guardarModiVinilo');
+
+Route::post('/modificarVinilo', 'VinilosController@modificarVinilo');
+
+Route::post('/eliminarVinilo', 'VinilosController@eliminarVinilo');
+
 
 // Usuarios
 
@@ -43,7 +50,14 @@ Route::get('/perfil', 'UserPerfilController@showperfil');
 
 Route::post('/updateData', 'UserPerfilController@updateData');
 
+//Carrito
+Route::get('cart', 'VinilosController@cart');
 
+Route::get('add-to-cart/{id}', 'VinilosController@addToCart');
+
+Route::patch('update-cart', 'VinilosController@update');
+
+Route::delete('remove-from-cart', 'VinilosController@remove');
 
 Route::get('/faq', function () {
     return view('faq');
@@ -56,8 +70,4 @@ Route::get('/pagos', function(){
 });
 Route::get('/contacto', function(){
   return view('contacto');
-});
-
-Route::get('/carrito', function(){
- return view('carrito');
 });
