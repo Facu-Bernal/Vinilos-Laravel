@@ -5,12 +5,12 @@
 @section('title', 'Living')
 @section('contenido')
 <div class="container" style="margin: 0 auto" ;>
-    <div class="row inspirate-seccion">
-        <img id="btn" src="img/Living.png" alt="">
+    <div class="row">
+      <a href="/living"><img class="inspirate-seccion" src="img/Living.png" alt=""></a>
     </div>
     <section class="tarjetas">
       <div class="row">
-
+        
         @foreach($vinilos as $vinilo)
             <div class="col-xs-18 col-sm-6 col-md-3">
                 <div class="thumbnail">
@@ -41,8 +41,7 @@
                 </div>
               </div>
             </div>
-
-        @endforeach
+    @endforeach
       </div>
     </section>
 </div>

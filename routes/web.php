@@ -59,6 +59,7 @@ Route::patch('update-cart', 'VinilosController@update');
 
 Route::delete('remove-from-cart', 'VinilosController@remove');
 
+
 Route::get('/faq', function () {
     return view('faq');
 });

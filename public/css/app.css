@@ -126,9 +126,8 @@ i.fas {
   padding-left: 2px;
   z-index: 3;
   position: absolute;
-  bottom: 11px;
-  right: 18px;
-
+  bottom: 5px;
+  right: 90px;
 }
 /* #ul4{
   position: relative;
@@ -157,6 +156,13 @@ i.fas {
 .nombre_login{
   position: relative;
   top: 7px;
+}
+div.dropdown-menu{
+  top: 16px;
+  width: 114px;
+  left: 233px;
+  box-shadow: 0px 5px 30px black;
+  border-radius: 11px;
 }
 /* Header */
 
@@ -548,11 +554,11 @@ a.links{
   box-shadow:none !important;
 }
 .dropdown .dropdown-menu{
-  padding:20px;
-  top:30px !important;
-  width:350px !important;
-  left:-110px !important;
-  box-shadow:0px 5px 30px black;
+  padding: 20px;
+  top: 53px;
+  width: 209px;
+  left: -74px;
+  box-shadow: 0px 5px 30px black;
 }
 .total-header-section{
   border-bottom:1px solid #d2d2d2;
@@ -661,7 +667,23 @@ img.perfil{
 }
 
 /* Usuario */
-
+/* Banner */
+img.inspirate-seccion{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-left: 5%;
+  padding-right: 0;
+  padding-top: 2%;
+  position: relative;
+  right: 3px;
+  width: 102%;
+}
+#articulos{
+  margin-top: 5%;
+}
+.table-responsive{
+  margin-bottom: 5%
+}
 @media (min-width: 768px){
 
 /* Login */
@@ -719,6 +741,18 @@ a.nav-item{
 .titulo-faq {
   font-size: 3em;
 }
+/* Banner */
+img.inspirate-seccion{
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-left: 5%;
+  padding-right: 0;
+  padding-top: 2%;
+  position: relative;
+  right: 37px;
+  width: 97em
+}
+/* banner */
 /* FAQ */
 /* Footer */
 #footer{
